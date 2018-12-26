@@ -1,0 +1,90 @@
+# Shell
+shell -$SHELL
+
+# Disable vbell
+vbell off
+
+# Auto Detach when lost connection
+autodetach on
+
+# Start message
+startup_message off
+
+# Set default encoding using utf8
+defutf8 on
+
+# Dynamic title
+#shelltitle '$ |bash'
+
+# Scrollback history
+defscrollback 10000
+
+# Refresh the display when exiting programs
+#altscreen on
+
+# Do not refresh the display when exiting programs
+altscreen off
+
+# buttom status bar
+caption always "%{=u .G} %-w%<%{=ub .y}%n %t%{=u .G}%+w "
+hardstatus alwaysignore
+hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .W}@%H %=%{= .y} %Y/%m/%d%{= .m} %C %A"
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s "
+
+# C-a b : encoding big5
+# C-a u : encoding utf8
+bind b encoding big5 utf8
+bind u encoding utf8 utf8
+
+# C + left : prev
+# C + right : next
+bindkey "^[[1;5C" next
+bindkey "^[O5C" next
+bindkey "^[[C" next
+bindkey "^[[1;5D" prev
+bindkey "^[O5D" prev
+bindkey "^[[D" prev
+
+# bind Alt`~= to screen0~12
+bindkey "^[`" select 0
+bindkey "^[1" select 1
+bindkey "^[2" select 2
+bindkey "^[3" select 3
+bindkey "^[4" select 4
+bindkey "^[5" select 5
+bindkey "^[6" select 6
+bindkey "^[7" select 7
+bindkey "^[8" select 8
+bindkey "^[9" select 9
+bindkey "^[0" select 10
+bindkey "^[-" select 11
+bindkey "^[=" select 12
+
+# C-b $num : move current window to number $num
+bind -c move 0 number 0
+bind -c move 1 number 1
+bind -c move 2 number 2
+bind -c move 3 number 3
+bind -c move 4 number 4
+bind -c move 5 number 5
+bind -c move 6 number 6
+bind -c move 7 number 7
+bind -c move 8 number 8
+bind -c move 9 number 9
+bindkey "^b" command -c move
+
+# Alt + key : split window
+bindkey "^[s" split
+bindkey "^[q" only
+bindkey "^[f" focus
+
+# remove some stupid / dangerous key bindings
+bind s
+bind k
+bind W
+bind ^k
+bind .
+bind ^\
+bind \\
+bind ^h
+bind h
