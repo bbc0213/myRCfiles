@@ -1,2 +1,4 @@
 NVIDIA NCCL Network Installer for Redhat and Centos 7
 https://developer.download.nvidia.com/compute/machine-learning/repos/rhel7/x86_64/nvidia-machine-learning-repo-rhel7-1.0.0-1.x86_64.rpm
+NVIDIA NCCL Local Installer for Redhat and Centos 7
+https://developer.nvidia.com/compute/machine-learning/nccl/secure/v2.3/prod4/nccl-repo-rhel7-2.3.7-ga-cuda9.0-1-1.x86_64.rpm
